@@ -1,0 +1,9 @@
+on:
+   schedule:
+      - cron : 0 * * * *   # UTC time zone
+jobs:
+   every-hour-task:
+     runs-on : ubuntu-latest
+     steps:
+        -name : print massage
+        run : echo "Another hour passed"
