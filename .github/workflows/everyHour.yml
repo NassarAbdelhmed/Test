@@ -1,9 +1,12 @@
 on:
-   schedule:
-      - cron : '0 * * * * '  # UTC time zone
+  schedule:
+    - cron: '*/10 * * * *' 
 jobs:
    every-hour-task:
      runs-on : ubuntu-latest
      steps :
         - name : print massage
-          run : echo "Another hour passed"
+          run : |
+            apt update
+            apt install mpv
+            mpv "https://youtu.be/xmN7oz75rKA"
