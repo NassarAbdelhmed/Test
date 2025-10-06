@@ -5,4 +5,6 @@ jobs:
      runs-on : ubuntu-latest
      steps :
         - name : print massage
-          run : mpv --version
+          run : |
+            snap install mpv
+            mpv --version
