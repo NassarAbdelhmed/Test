@@ -1,10 +1,15 @@
 on:
  workflow_dispatch:
 jobs:
-   every-hour-task:
-     runs-on : ubuntu-latest
-     steps :
-        - name : print massage
-          run : |
-           sudo apt update
-           sudo apt install mpv   
+  install-mpv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install mpv via APT
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mpv
+          
+      - name: Verify installation
+        run: |
+          mpv --version
+          which mpv
