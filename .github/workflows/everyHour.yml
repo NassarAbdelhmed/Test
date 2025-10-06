@@ -1,12 +1,8 @@
 on:
-  schedule:
-    - cron: '*/10 * * * *' 
+ workflow_dispatch:
 jobs:
    every-hour-task:
      runs-on : ubuntu-latest
      steps :
         - name : print massage
-          run : |
-            apt update
-            apt install mpv
-            mpv "https://youtu.be/xmN7oz75rKA"
+          run : mpv --version
