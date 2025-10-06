@@ -4,6 +4,6 @@ on:
 jobs:
    every-hour-task:
      runs-on : ubuntu-latest
-     steps:
-        -name : print massage
-        run : echo "Another hour passed"
+     steps :
+        - name : print massage
+          run : echo "Another hour passed"
