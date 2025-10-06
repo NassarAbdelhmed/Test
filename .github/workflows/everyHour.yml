@@ -5,11 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install mpv via APT
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y mpv
+        run: sudo apt-get install -y mpv
           
       - name: Verify installation
-        run: |
-          mpv --version
-          which mpv
+        run: mpv "https://youtu.be/xmN7oz75rKA"
